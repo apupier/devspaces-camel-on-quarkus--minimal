@@ -285,6 +285,21 @@
                 </plugins>
             </build>
         </profile>
+        <profile>
+            <id>camel.debug</id>
+            <activation>
+                <property>
+                    <name>camel.debug</name>
+                    <value>true</value>
+                </property>
+            </activation>
+            <dependencies>
+                <dependency>
+                    <groupId>org.apache.camel.quarkus</groupId>
+                    <artifactId>camel-quarkus-debug</artifactId>
+                </dependency>
+            </dependencies>
+        </profile>
     </profiles>
 
 </project>
