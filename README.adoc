@@ -1,6 +1,9 @@
 = Timer Hello World: A Camel Quarkus example
 :cq-example-description: An example that uses the Camel timer component to output a Hello world message to the console
 
+https://workspaces.openshift.com/#https://github.com/apupier/devspaces-camel-on-quarkus-minimal.git[Open in Red Hat Developer Sandbox]
+
+
 {cq-description}
 
 TIP: Check the https://camel.apache.org/camel-quarkus/latest/first-steps.html[Camel Quarkus User guide] for prerequisites
