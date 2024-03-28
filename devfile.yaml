@@ -1,0 +1,37 @@
+schemaVersion: 2.2.2
+metadata:
+  name: camel-on-quarkus-minimal
+commands:
+  - id: package
+    exec:
+      component: tools
+      workingDir: ${PROJECT_SOURCE}
+      commandLine: "mvn package"
+      group:
+        kind: build
+        isDefault: true
+  - id: package-native
+    exec:
+      label: "Package Native"
+      component: tools
+      workingDir: ${PROJECT_SOURCE}
+      commandLine: "mvn package -Dnative -Dmaven.test.skip -Dquarkus.native.native-image-xmx=2G"
+      group:
+        kind: build
+  - id: start-dev
+    exec:
+      label: "Start Development mode (Hot reload + debug)"
+      component: tools
+      workingDir: ${PROJECT_SOURCE}
+      commandLine: "mvn compile quarkus:dev"
+      group:
+        kind: run
+        isDefault: true
+  - id: start-native
+    exec:
+      label: "Start Native"
+      component: ubi-minimal
+      workingDir: ${PROJECT_SOURCE}/target
+      commandLine: "./*-runner"
+      group:
+        kind: run
