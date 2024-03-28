@@ -37,8 +37,8 @@ commands:
   - id: start-native
     exec:
       label: "Start Native"
-      component: ubi-minimal
+      component: tools
       workingDir: ${PROJECT_SOURCE}/target
-      commandLine: "./*-runner"
+      commandLine: "./-runner"
       group:
         kind: run
