@@ -39,6 +39,6 @@ commands:
       label: "Start Native"
       component: tools
       workingDir: ${PROJECT_SOURCE}/target
-      commandLine: "./-runner"
+      commandLine: "./camel-quarkus-examples-timer-log-3.9.0-runner"
       group:
         kind: run
