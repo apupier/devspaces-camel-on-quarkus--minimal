@@ -1,6 +1,10 @@
 schemaVersion: 2.2.2
 metadata:
   name: camel-on-quarkus-minimal
+components:
+  - name: tools
+    container:
+      image: quay.io/devfile/universal-developer-image:ubi8-latest
 commands:
   - id: package
     exec:
